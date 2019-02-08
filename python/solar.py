@@ -1,3 +1,7 @@
+#
+# Created by Patrick Moffitt on 2019-02-04.
+#
+
 from math import sin, trunc
 from time import gmtime, localtime, struct_time
 from datetime import datetime, timedelta, timezone

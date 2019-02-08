@@ -1,3 +1,7 @@
+#
+# Created by Patrick Moffitt on 2019-02-04.
+#
+
 from solar import Solar
 
 query = {

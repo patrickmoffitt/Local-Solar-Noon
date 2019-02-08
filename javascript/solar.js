@@ -1,3 +1,7 @@
+//
+// Created by Patrick Moffitt on 2019-02-04.
+//
+
 var solar = (function () {
   // Days since Jan 1, 2000 12:00 UT
   function epoch2kDay (query) {
