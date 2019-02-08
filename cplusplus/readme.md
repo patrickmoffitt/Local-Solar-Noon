@@ -41,8 +41,9 @@ longitude [using this tool](https://www.esrl.noaa.gov/gmd/grad/solcalc/). While
 you are there note the times they give you for your longitude and query time. If
 you need to know your time zone (UTC offset) you can
 [look that up](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) on
-Wikipedia. Then update this struct in main.cpp with your longitude and the time
-you're interested in.
+Wikipedia. Then update this struct in 
+[main.cpp](https://github.com/patrickmoffitt/Local-Solar-Noon/blob/master/cplusplus/main.cpp)
+with your longitude and the time you're interested in.
 ```c++
 solar::query _query{
                    ._tm = {
@@ -74,6 +75,6 @@ The value you get for Solar Noon should be within 3 seconds of that provided by
 NOAA. If it's not check that the UTC offset on the first line of the output
 matches the published values. Be sure you entered this value into the NOAA tool.
 For example (in February 2019) America/New_York is -5 and Australia/Darwin is
-+9.5. Also check that the longitude has the correct value and sign for the local.
++9.5. Also check that the longitude has the correct value and sign for your location.
 If the input is correct and the output is still wrong please open an issue with
 the struct you used and the output you got.

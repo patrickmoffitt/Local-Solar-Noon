@@ -14,7 +14,7 @@ dial then you may want to read further.
 This project borrows all its math from experts. The ever so grandly named
 _Equation of Time_ was done using the Fourier Method
 [shown here](https://equation-of-time.info/calculating-the-equation-of-time).
-Despite sounding like a math lesson from a wizard in dark blue police box, that
+Despite sounding like a math lesson from a wizard in a dark blue police box, that
 formula isn't enough to very accurately determine Solar Noon. One must also
 calculate the longitudinal offset for their location. I borrowed this math from
 NOAA on page two of [this PDF](https://www.esrl.noaa.gov/gmd/grad/solcalc/solareqns.PDF).
