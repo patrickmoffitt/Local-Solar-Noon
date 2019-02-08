@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Local Solar Noon</title>
+  <meta name="description" content="A Local Solar Noon Calculator">
+  <meta name="author" content="Patrick K. Moffitt">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="solar.js"></script>
+</head>
+<body>
+<script>
+(function() {
+  var query = {
+    year: 2019,
+    month: 2, // Normal month number NOT monthIndex
+    day: 7,
+    hour: 12,
+    longitude: -75.96106
+  }
+  
+  // query = solar.getQueryNow(-75.96106)
+
+  var days = solar.epoch2kDay(query)
+  var eot = solar.equationOfTime(days)
+  var offset = solar.longitudeOffset(eot, query.longitude)
+  var minutesOffset = solar.floatToFixed(offset)
+  var solarNoon = solar.solarNoon(offset)
+  var utcOffset = solar.printSigned(solar.getOffsetMinutes() / 60)
+
+  document.write('<p>Local Time Zone UTC ' + utcOffset + ' hours.</p>')
+  document.write('<p>Epoch 2000 Day: ' + solar.floatToFixed(days) + '</p>')
+  document.write('<p>Equation of Time: ' + solar.floatToFixed(eot) + '</p>')
+  document.write('<p>Longitude Offset Minutes: ' + minutesOffset + '</p>')
+  document.write('<p>Solar Noon: ' + solarNoon + '</p>')
+})();
+</script>
+</body>
+
+</html>
